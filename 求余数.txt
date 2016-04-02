@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int a,b,c,t,n;
+cin>>n;
+a=n/100;
+t=n%100;
+b=t/10;
+c=t%10;
+cout<<a<<endl;
+cout<<b<<endl;
+cout<<c<<endl;
+return 0;
+}
