@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int h[5];
+	int i,j,d;
+	int a=0,b=100;
+	for(i=0;i<6;i++)
+	{
+		cin>>h[i];
+	}
+	for(j=0;j<6;j++)
+	{
+		
+		if((h[j]%2==1)&&h[j]>a)
+		{
+			a=h[j];
+		}
+		else
+			if((h[j]%2==0)&&h[j]<b)
+			{
+				b=h[j];
+			}
+		if(a>b)
+			d=a-b;
+		else
+			d=b-a;
+	}
+	cout<<d<<endl;
+	return 0;
+}
