@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int n,k,a[10000];
+int h=0,m=0;
+cin>>n>>k;
+for(int i=0;i<n;i++)
+{
+cin>>a[i];
+}
+for(int j=0;j<n-1;j++)
+{
+	for(h=j+1;h<n;h++)
+	{
+           if((k-a[j]==a[j+h]))
+	{
+		cout<<"yes"<<endl;
+                return 0;
+	}
+        else
+        m++; 
+        }
+}
+if(m=((1+n)*n)/2)
+cout<<"no"<<endl;
+return 0;
+}
