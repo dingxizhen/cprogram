@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int n,m1,m2,m3,m4,m5,m6,t1,t2,t3,t4,t5;
+cin>>n;
+m1=n%100;
+t1=n/100;
+m2=m1%50;
+t2=m1/50;
+m3=m2%20;
+t3=m2/20;
+m4=m3%10;
+t4=m3/10;
+m5=m4%5;
+t5=m4/5;
+cout<<t1<<endl;
+cout<<t2<<endl;
+cout<<t3<<endl;
+cout<<t4<<endl;
+cout<<t5<<endl;
+cout<<m5<<endl;
+return 0;
+}
