@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int n,a[10000];
+cin>>n;
+for(int i=0;i<n;i++)
+{
+cin>>a[i];
+}
+for(int j=0;j<n;j++)
+{
+double t1=(double)a[j]/3+50;
+double t2=(double)a[j]/1.2;
+if(t1<t2)
+cout<<"Bike"<<endl;
+else
+if(t2<t1)
+cout<<"Walk"<<endl;
+else
+if(t1=t2)
+cout<<"All"<<endl;
+}
+return 0;
+}
