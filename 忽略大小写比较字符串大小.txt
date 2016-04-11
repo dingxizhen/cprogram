@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i=0,sum1=0,sum2=0;
+	char result;
+	char a[100];
+	char s[100];
+	cin.getline(a,80);
+	cin.getline(s,80);
+	for(int j=0;j<80;j++)
+	{
+		if((65<=a[j])&&(a[j]<=90))
+			a[j]=a[j]+32;
+		if((65<=s[j])&&(s[j]<=90))
+			s[j]=s[j]+32;
+	}
+while(a[i]!='\0'&&(a[i]==s[i]))
+	{
+		i++;
+	}
+	if(a[i]>s[i])
+	{
+		result='>';
+	}
+	else if(a[i]<s[i])
+	{
+		result='<';
+	}
+	else
+	{
+		result='=';
+	}
+
+	cout<<result<<endl;
+	return 0;
+}
