@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int n,m;
+int a[10000];
+cin>>n>>m;
+for(int y=0;y<m;y++)
+{
+	a[y]=0;
+}
+for(int i=m;i<n+m;i++)
+{
+	cin>>a[i];
+}
+for(int j=0;j<m;j++)
+{
+	a[j]=a[n];
+	n++;
+}
+for(int x=0;x<n-m;x++)
+{
+	cout<<a[x]<<" ";
+}
+return 0;
+}
