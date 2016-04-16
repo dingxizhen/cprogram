@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n,m;
+	char a;
+	cin>>n>>m>>a;
+	switch(a)
+	{
+	case '+':cout<<n+m<<endl;break;
+	case '-':cout<<n-m<<endl;break;
+	case '*':cout<<n*m<<endl;break;
+	case '/':if(m==0)
+			 {
+				 cout<<"Divided by zero!"<<endl;
+				 break;
+			 }
+		 else
+			 cout<<n/m<<endl;break;
+	default:cout<<"Invalid operator!"<<endl;
+	}
+	return 0;
+}
