@@ -1,0 +1,50 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main()
+{
+	int ID[3];
+	int d[100];
+	float z[100];
+	float sum[3]={0,0,0};
+	float sumA=0,sumB=0,sumC=0;
+	char s;
+	char b[100];
+	float m;
+	for(int i=0;i<3;i++)
+	{
+		cin>>ID[i]>>d[i];
+		for(int j=0;j<d[i];j++)
+		{
+			cin>>b[j]>>z[j];
+			sum[i]=sum[i]+z[j];
+			if(b[j]=='A')
+				sumA=sumA+z[j];
+			else if(b[j]=='B')
+				sumB=z[j]+sumB;
+			else if(b[j]=='C')
+				sumC=z[j]+sumC;
+		}
+	}
+	for(int y=0;y<2;y++)
+	{
+		if(ID[y]>ID[y+1])
+		{
+			int temp1=ID[y];
+			ID[y]=ID[y+1];
+			ID[y+1]=temp1;
+			int temp2=sum[y];
+			sum[y]=sum[y+1];
+			sum[y+1]=temp2;
+		}
+	}
+	for(int n=0;n<3;n++)
+	{
+		cout<<ID[n]<<" ";
+		cout<<fixed<<setprecision(2)<<sum[n]<<endl;
+	}
+	cout<<fixed<<setprecision(2)<<"A"<<" "<<sumA<<endl;
+	cout<<fixed<<setprecision(2)<<"B"<<" "<<sumB<<endl;
+    cout<<fixed<<setprecision(2)<<"C"<<" "<<sumC<<endl;
+	return 0;
+}
